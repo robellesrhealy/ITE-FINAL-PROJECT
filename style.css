@@ -1,0 +1,225 @@
+body {
+ font-family: cursive;
+ background-image: url("robelles.png"); 
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+ min-height:200vh;
+ color: rgb(194, 16, 135);
+ margin: 0;
+ transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+ background: rgba(14, 1, 44, 0.8);
+ color: rgb(12, 123, 138);
+ padding: 15px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+}
+
+.nav-links a,
+.nav-links button {
+ color: rgb(20, 187, 123);
+ margin-left: 15px;
+ background: none;
+ border: none;
+ cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+ text-decoration: underline;
+}
+
+.hero {
+display:flex;
+  justify-content:center;
+  align-items:center;   
+  min-height: 40vh;
+  padding: 40px;
+  position: relative;
+}
+
+.hero.top-text .text-box {
+  position: absolute;
+  top: 20px;    
+  left: 40px;
+  background-image: url("robelles.png");
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 900px;
+  color: rgb(36, 7, 165);
+}
+
+.about {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;   
+  min-height: 30vh;
+  padding: 40px;
+  position: relative;
+}
+
+.about.bottom-text .text-box {
+  position:relative;
+  margin-top: 150px;  
+  left: 40px;
+  background:bisque;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  color: rgb(108, 73, 117);
+}
+
+.about .bottom-text {
+ background-image:url("about.png");
+ padding: 30px;
+ border-radius: 10px;
+ max-width: 100px;
+ min-height:50vh;
+ color: rgb(4, 218, 129);
+}
+
+/* Genre Buttons */
+.genre-buttons {
+ text-align: center;
+ margin: 20px;
+}
+
+.genre-buttons button {
+ background: #a50971;
+ color: rgb(35, 187, 116);
+ padding: 10px 15px;
+ border-radius: 4px;
+ margin: 5px;
+ border: none;
+ cursor: pointer;
+}
+
+.genre-buttons button:hover {
+ background: #680560;
+}
+
+/* Story Cards */
+.story-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ gap: 20px;
+ padding: 20px;
+}
+
+.story-card {
+ background: rgba(134, 207, 183, 0.9);
+ border: 2px solid #86113e;
+ border-radius: 10px;
+ padding: 15px;
+ text-align: center;
+}
+
+.story-card img {
+ width: 100%;
+ height: 320px;
+ object-fit: cover;
+ border-radius: 6px;
+ margin-bottom: 10px;
+}
+
+/* Chapter View */
+.chapter-view {
+ padding: 20px;
+ background: rgba(120, 190, 135, 0.9);
+ border: 2px solid #86113e;
+ border-radius: 10px;
+ margin: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+ background: #111 url("library-bg.jpg") fixed center/cover;
+ color: rgb(111, 7, 172);
+}
+
+.dark-mode .navbar {
+ background: rgba(20,20,20,0.9);
+}
+
+.dark-mode .story-card {
+ background: rgba(50,50,50,0.9);
+ color: rgb(168, 23, 71);
+}
+.chapter-box {
+  background: #5f9b84;              
+  border: 2px solid #86113e;     
+  border-radius: 10px;
+  padding: 25px;                
+  margin: 30px auto;
+  max-width: 900px;              
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+}
+
+.chapter-box h2 {
+  font-size: 28px;               
+  color: #86113e;
+  margin-bottom: 15px;
+}
+
+.chapter-box p {
+  font-size: 18px;               
+  margin-bottom: 20px;
+}
+
+.chapter-box pre {
+  font-family: "Georgia", serif;
+  font-size: 20px;              
+  line-height: 1.8;            
+  color: #333;
+  white-space: pre-wrap;         
+  overflow-y: auto;             
+  max-height: 75vh;             
+}
+#story-container {
+  padding-bottom: 80px; /* dagdag space para hindi matakpan */
+}
+
+#chapter-view {
+  padding-bottom: 100px; /* dagdag space para hindi matabunan ang Back to Stories button */
+}
+
+footer {
+  background-color: #a706bd;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.story-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
+}
+
+.story-card:hover {
+  transform: scale(1.05); /* lumalaki ng konti */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* may shadow effect */
+  cursor: pointer; /* nagpapakita ng pointer cursor */
+}
+body.dark-mode .about {
+  background-image: url("robelles.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body.dark-mode .about::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+}

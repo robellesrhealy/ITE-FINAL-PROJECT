@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <title>Robelles Library | Stories</title>
+</head>
+<body>
+ <!-- NAVBAR -->
+ <nav class="navbar">
+ <h1>WELCOME TO ROBELLES BOOK STORIES</h1>
+ <div class="nav-links">
+ <a href="#home">Home</a>
+ <a href="#stories">Stories</a>
+ <a href="#about">About</a>
+ <button onclick="toggleMode()">Dark/Light</button>
+ </div>
+ </nav>
+
+ <!-- DISCOVER -->
+ <section id="home" class="hero top-text">
+  <div class="text-box">
+    <p class="tagline">
+      Discover magical adventures... <br>
+      Explore timeless stories of love, mystery, and wonder... <br>
+      Begin your journey inside Robelles Library.
+    </p>
+  </div>
+</section>
+
+ <!-- ABOUT -->
+ <section id="about" class="about">
+ <div class="text-box  bottom-text">
+  <div class="text-box"></div>
+ <h2>About My Storybook</h2>
+ <p>Robelles Library is a collection of stories across Romance, Sci-Fi, and Horror. Each story begins with a complete Chapter 1.</p>
+ </div>
+ </section>
+
+ <!-- GENRE BUTTONS -->
+ <section class="genre-buttons">
+ <button onclick="scrollToGenre('romance')">Romance</button>
+ <button onclick="scrollToGenre('sci-fi')">Sci-Fi</button>
+ <button onclick="scrollToGenre('horror')">Horror</button>
+ <button onclick="scrollToGenre('all')">Show All</button>
+ </section>
+
+ <!-- STORIES -->
+ <section id="stories" class="stories">
+ <h2>Featured Stories</h2>
+ <div id="story-container" class="story-container"></div>
+ </section>
+
+ <!-- CHAPTER VIEW -->
+ <section id="chapter-view" style="display:none;">
+  <div id="chapter-content"></div>
+  <button onclick="backToStories()">⬅ Back to Stories</button>
+</section>
+ 
+<footer>
+  <p>© 2026 Robelles Library | All Rights Reserved</p>
+</footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
+
